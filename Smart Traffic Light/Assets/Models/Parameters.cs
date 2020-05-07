@@ -2,10 +2,10 @@
 {
     public abstract class Parameters
     {
-        public double AverageAmount { get; protected set; }
+        public const double AverageCoefficient = 0.5;
 
-        public abstract int CurrentAmount { get; set; }
+        public abstract int AverageAmount { get; }
 
-        public abstract int MaxAmount { get; set; }
+        public abstract int CurrentAmount { get; }
     }
 }

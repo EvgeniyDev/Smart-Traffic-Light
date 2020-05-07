@@ -1,33 +1,17 @@
-﻿namespace Assets.Models
+﻿using System;
+
+namespace Assets.Models
 {
     public class PeopleParameters : Parameters
     {
-        private int currentAmount;
+        public override int AverageAmount 
+        {
+            get => (int)(LevelLimits.MaxPeopleAmount * AverageCoefficient); 
+        }
 
         public override int CurrentAmount 
         {
-            get => currentAmount;
-            set
-            {
-                if (value >= 0 && value <= maxAmount)
-                {
-                    currentAmount = value;
-                }
-            }
-        }
-
-        private int maxAmount;
-
-        public override int MaxAmount
-        {
-            get => maxAmount;
-            set
-            {
-                if (value >= 0 && value <= LevelLimits.MaxPeopleAmount)
-                {
-                    maxAmount = value;
-                }
-            }
-        }
+            get => (int)Math.Round(AverageAmount * AppearanceIntensity.CurrentPeopleAppearance, MidpointRounding.AwayFromZero);
+        }       
     }
 }

@@ -14,7 +14,7 @@ namespace Assets.Models
             get => hour;
             set
             {
-                if (value >= 0 && value <= 23)
+                if (value >= 0 && value < HoursInADay)
                 {
                     hour = value;
                 }
@@ -52,7 +52,7 @@ namespace Assets.Models
         /// <summary>
         /// Amount of hours in a day
         /// </summary>
-        public static int HoursInADay { get => 24; }
+        public const int HoursInADay = 24;
 
         /// <summary>
         /// Sets game clock to real current time
