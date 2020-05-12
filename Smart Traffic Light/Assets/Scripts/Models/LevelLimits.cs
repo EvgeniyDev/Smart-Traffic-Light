@@ -1,6 +1,6 @@
-﻿namespace Assets.Models
+﻿namespace Assets.Scripts.Models
 {
-    public static class LevelLimits
+    public class LevelLimits
     {
         public static int MaxPeopleAmount { get; set; }
 

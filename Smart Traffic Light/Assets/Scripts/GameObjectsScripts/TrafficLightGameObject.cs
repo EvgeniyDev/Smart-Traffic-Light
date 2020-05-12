@@ -1,15 +1,15 @@
-﻿using Assets.Models;
+﻿using Assets.Scripts.Models;
 using UnityEngine;
 
 public class TrafficLightGameObject : MonoBehaviour
 {
-    private readonly TrafficLight trafficLightLogic = new TrafficLight();
+    private readonly TrafficLight trafficLightLogic;
 
     private int delay;
 
     void Start()
     {
-        delay = trafficLightLogic.Delay;
+        
     }
 
     void Update()

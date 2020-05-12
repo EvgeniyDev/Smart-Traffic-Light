@@ -1,15 +1,15 @@
 ﻿using System;
 
-namespace Assets.Models
+namespace Assets.Scripts.Models
 {
     public class PeopleParameters : Parameters
     {
-        public override int AverageAmount 
+        public static int AverageAmount 
         {
             get => (int)(LevelLimits.MaxPeopleAmount * AverageCoefficient); 
         }
 
-        public override int CurrentAmount 
+        public static int CurrentAmount 
         {
             get => (int)Math.Round(AverageAmount * AppearanceIntensity.CurrentPeopleAppearance, MidpointRounding.AwayFromZero);
         }       

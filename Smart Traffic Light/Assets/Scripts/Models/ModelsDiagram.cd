@@ -1,87 +1,80 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Assets.Models.AppearanceIntensity" Collapsed="true">
-    <Position X="8.5" Y="1.25" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAIAAAQAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAAAAAA=</HashCode>
-      <FileName>Assets\Models\AppearanceIntensity.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Assets.Models.CarsParameters" Collapsed="true">
+  <Class Name="Assets.Scripts.Models.CarsParameters" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Models\CarsParameters.cs</FileName>
+      <FileName>Assets\Scripts\Models\CarsParameters.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Assets.Models.Entity" Collapsed="true">
+  <Class Name="Assets.Scripts.Models.Entity" Collapsed="true">
     <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Assets\Models\Entity.cs</FileName>
+      <FileName>Assets\Scripts\Models\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Assets.Models.LevelLimits" Collapsed="true">
+  <Class Name="Assets.Scripts.Models.LevelLimits" Collapsed="true">
     <Position X="8.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
-      <FileName>Assets\Models\LevelLimits.cs</FileName>
+      <FileName>Assets\Scripts\Models\LevelLimits.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Assets.Models.Parameters" Collapsed="true">
+  <Class Name="Assets.Scripts.Models.Parameters" Collapsed="true">
     <Position X="1.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Models\Parameters.cs</FileName>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Models\Parameters.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Assets.Models.PeopleParameters" Collapsed="true">
+  <Class Name="Assets.Scripts.Models.PeopleParameters" Collapsed="true">
     <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Models\PeopleParameters.cs</FileName>
+      <FileName>Assets\Scripts\Models\PeopleParameters.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Assets.Models.TimeOfDay" Collapsed="true">
+  <Class Name="Assets.Scripts.Models.TimeOfDay" Collapsed="true">
     <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAAAAAAAAgAAAAIAAAAAACIAAAAiAAAAAEA=</HashCode>
-      <FileName>Assets\Models\TimeOfDay.cs</FileName>
+      <FileName>Assets\Scripts\Models\TimeOfDay.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Assets.Models.TrafficLight" Collapsed="true">
+  <Class Name="Assets.Scripts.Models.TrafficLight" Collapsed="true">
     <Position X="6" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAoAAAAAkEAAAAAAAAAAAAAAAAKAACAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Models\TrafficLight.cs</FileName>
+      <HashCode>AAAIAAAAAkEAAAAAAAAAAQEAAAAAAACgAEQgAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Models\TrafficLight.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Assets.Models.WaitingCarsParameters" Collapsed="true">
+  <Class Name="Assets.Scripts.Models.WaitingCarsParameters" Collapsed="true">
     <Position X="8" Y="5.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Models\WaitingCarsParameters.cs</FileName>
+      <FileName>Assets\Scripts\Models\WaitingCarsParameters.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Assets.Models.WaitingPeopleParameters" Collapsed="true">
+  <Class Name="Assets.Scripts.Models.WaitingPeopleParameters" Collapsed="true">
     <Position X="3.5" Y="5.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
-      <FileName>Assets\Models\WaitingPeopleParameters.cs</FileName>
+      <FileName>Assets\Scripts\Models\WaitingPeopleParameters.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="Assets.Models.TrafficLightSignal" Collapsed="true">
+  <Enum Name="Assets.Scripts.Models.TrafficLightSignal" Collapsed="true">
     <Position X="5.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAABEAAAAAA=</HashCode>
-      <FileName>Assets\Models\TrafficLightSignal.cs</FileName>
+      <FileName>Assets\Scripts\Models\TrafficLightSignal.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Assets.Models.TrafficLightState" Collapsed="true">
+  <Enum Name="Assets.Scripts.Models.TrafficLightState" Collapsed="true">
     <Position X="7" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>Assets\Models\TrafficLightState.cs</FileName>
+      <FileName>Assets\Scripts\Models\TrafficLightState.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

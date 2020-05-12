@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assets.Models
+namespace Assets.Scripts.Models
 {
     /// <summary>
     /// Represents game clock
