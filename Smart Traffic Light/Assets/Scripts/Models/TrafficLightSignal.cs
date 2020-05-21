@@ -1,6 +1,6 @@
 ﻿namespace Assets.Scripts.Models
 {
-    public enum TrafficLightSignal
+    public enum TrafficLightSignal : byte
     {
         RedLight,
         YellowLight,
