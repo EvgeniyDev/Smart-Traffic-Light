@@ -74,7 +74,7 @@ public class TrafficLightGameObject : MonoBehaviour
 
         Debug.Log($"{gameObject.name} : {trafficLightLogic.TrafficLightSignal} : {delay}s");
 
-        yield return new WaitForSecondsRealtime(delay);
+        yield return new WaitForSeconds(delay);
 
         previousSignal = TrafficLightSignal.RedLight;
         trafficLightLogic.TrafficLightSignal = TrafficLightSignal.YellowLight;
@@ -90,7 +90,7 @@ public class TrafficLightGameObject : MonoBehaviour
 
         Debug.Log($"{gameObject.name} : {trafficLightLogic.TrafficLightSignal} : {delay}s");
 
-        yield return new WaitForSecondsRealtime(delay);
+        yield return new WaitForSeconds(delay);
 
         if (previousSignal == TrafficLightSignal.RedLight)
         {
@@ -113,7 +113,7 @@ public class TrafficLightGameObject : MonoBehaviour
 
         Debug.Log($"{gameObject.name} : {trafficLightLogic.TrafficLightSignal} : {delay}s");
 
-        yield return new WaitForSecondsRealtime(delay);
+        yield return new WaitForSeconds(delay);
 
         previousSignal = TrafficLightSignal.GreenLight;
         trafficLightLogic.TrafficLightSignal = TrafficLightSignal.YellowLight;
