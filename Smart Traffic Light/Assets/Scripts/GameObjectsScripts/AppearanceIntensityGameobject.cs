@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class AppearanceIntensityGameobject : MonoBehaviour
 {
-    [SerializeField]
-    private double[] carsAppearanceIntensity;
-    [SerializeField]
-    private double[] peopleAppearanceIntensity;
+    [HideInInspector]
+    public double[] carsAppearanceIntensity;
+    [HideInInspector]
+    public double[] peopleAppearanceIntensity;
 
     void Start()
     {
