@@ -15,13 +15,13 @@ public class ObjectInstantiatorScript : MonoBehaviour
     private bool isCarsCanSpawn;
     private bool isPeopleCanSpawn;
 
-    void Start()
+    private void Start()
     {
         isCarsCanSpawn = true;
         isPeopleCanSpawn = true;
     }
 
-    void Update()
+    private void Update()
     {
         if (CarsParameters.CurrentAmount > levelData.currentCarsAmountOnLevel && isCarsCanSpawn)
         {
@@ -34,7 +34,7 @@ public class ObjectInstantiatorScript : MonoBehaviour
         }
     }
 
-    void InstantiateCar()
+    private void InstantiateCar()
     {
         var randomSpawnPointIndex = Random.Range(0, carSpawnPoints.Length);
         var randomSpawnPoint = carSpawnPoints[randomSpawnPointIndex];
@@ -77,12 +77,70 @@ public class ObjectInstantiatorScript : MonoBehaviour
         StartCoroutine(SpawnCarsDelay());
     }
 
-    void InstantiatePerson()
+    private void InstantiatePerson()
     {
-        
+        var randomSpawnPointIndex = Random.Range(0, peopleSpawnPoints.Length);
+        var randomSpawnPoint = peopleSpawnPoints[randomSpawnPointIndex];
+
+        var randomPersonIndex = Random.Range(0, humanPrefabs.Length);
+        var randomPerson = humanPrefabs[randomPersonIndex];
+
+        switch (randomSpawnPointIndex)
+        {
+            case 0:
+                if (!peopleSpawnPoints[0].GetComponent<SpawnCheck>().isSpawnEmpty)
+                {
+                    return;
+                }
+
+                randomPerson.transform.position =
+                    new Vector3(randomSpawnPoint.gameObject.transform.position.x, randomSpawnPoint.transform.position.y);
+
+                break;
+
+            case 1:
+                if (!peopleSpawnPoints[1].GetComponent<SpawnCheck>().isSpawnEmpty)
+                {
+                    return;
+                }
+
+                randomPerson.transform.position =
+                    new Vector3(randomSpawnPoint.gameObject.transform.position.x, randomSpawnPoint.transform.position.y);
+
+                break;
+
+            case 2:
+                if (!peopleSpawnPoints[2].GetComponent<SpawnCheck>().isSpawnEmpty)
+                {
+                    return;
+                }
+
+                randomPerson.transform.position =
+                    new Vector3(randomSpawnPoint.gameObject.transform.position.x, randomSpawnPoint.transform.position.y);
+
+                break;
+
+            case 3:
+                if (!peopleSpawnPoints[3].GetComponent<SpawnCheck>().isSpawnEmpty)
+                {
+                    return;
+                }
+
+                randomPerson.transform.position =
+                    new Vector3(randomSpawnPoint.gameObject.transform.position.x, randomSpawnPoint.transform.position.y);
+
+                break;
+        }
+
+        var newPerson = Instantiate(randomPerson);
+        newPerson.name = randomPerson.name;
+
+        levelData.currentPeopleAmountOnLevel++;
+
+        StartCoroutine(SpawnPersonDelay());
     }
 
-    IEnumerator SpawnCarsDelay()
+    private IEnumerator SpawnCarsDelay()
     {
         var minSecondsDelay = 3;
         var maxSecondsDelay = 8;
@@ -93,5 +151,18 @@ public class ObjectInstantiatorScript : MonoBehaviour
         yield return new WaitForSeconds(realtimeDelay);
 
         isCarsCanSpawn = true;
+    }
+
+    private IEnumerator SpawnPersonDelay()
+    {
+        var minSecondsDelay = 2;
+        var maxSecondsDelay = 5;
+        var realtimeDelay = Random.Range(minSecondsDelay, maxSecondsDelay);
+
+        isPeopleCanSpawn = false;
+
+        yield return new WaitForSeconds(realtimeDelay);
+
+        isPeopleCanSpawn = true;
     }
 }
