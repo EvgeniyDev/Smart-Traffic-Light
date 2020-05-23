@@ -3,14 +3,21 @@ using UnityEngine;
 
 public class AppearanceIntensityGameobject : MonoBehaviour
 {
-    public double[] carsAppearanceIntensity;
-    public double[] peopleAppearanceIntensity;
+    [SerializeField]
+    public static double[] carsAppearanceIntensity;
+    [SerializeField]
+    public static double[] peopleAppearanceIntensity;
 
-    void Start()
+    private void Start()
     {
         AppearanceIntensity.SetDefaultParameters();
+
+        SetAppearanceParameters();
+    }
+
+    public static void SetAppearanceParameters()
+    {
         carsAppearanceIntensity = AppearanceIntensity.CarsAppearanceIntensityArray;
         peopleAppearanceIntensity = AppearanceIntensity.PeopleAppearanceIntensityArray;
     }
-
 }
