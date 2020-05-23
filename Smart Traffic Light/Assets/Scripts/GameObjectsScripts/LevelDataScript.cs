@@ -16,5 +16,7 @@ public class LevelDataScript : MonoBehaviour
     {
         LevelLimits.MaxCarsAmount = maxCarsAmount;
         LevelLimits.MaxPeopleAmount = maxPeopleAmount;
+
+        Time.timeScale = 1;
     }
 }
