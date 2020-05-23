@@ -4568,7 +4568,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &1222421266
 GameObject:
   m_ObjectHideFlags: 0
@@ -5643,9 +5643,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMixer: {fileID: 24100000, guid: adb815dbabb382a40a2c5bc6632405e8, type: 2}
-  volume: {fileID: 1096754114}
-  fullscreen: {fileID: 1212407595}
-  qualitySettingsDropdown: {fileID: 2087977451}
   resolutionDropdown: {fileID: 1971848503}
 --- !u!1 &1737304763
 GameObject:
