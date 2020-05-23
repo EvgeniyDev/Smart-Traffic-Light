@@ -3,8 +3,8 @@ using System;
 using System.IO;
 using TMPro;
 using UnityEngine;
-using UnityEditor;
 using UnityEngine.UI;
+using SFB;
 
 public class GameSettings : MonoBehaviour
 {
@@ -68,14 +68,15 @@ public class GameSettings : MonoBehaviour
         notificationText.text = "Default parameters were set successfully!";
     }
 
-    public void Apply()
+    public void SetParametersFromFile()
     {
-        string onFDOpenDirectory = Environment.CurrentDirectory;
-        string path = EditorUtility.OpenFilePanel("Load appearance parameters", onFDOpenDirectory, "json");
+        var onFDOpenDirectory = Environment.CurrentDirectory;
+        var path = StandaloneFileBrowser.OpenFilePanel("Load appearance parameters", onFDOpenDirectory, "json", false);
 
-        if (!string.IsNullOrEmpty(path))
+        // path[0] - Plugin fallback: will always take first element 
+        if (path.Length != 0 && !string.IsNullOrEmpty(path[0]))
         {
-            var jsonString = File.ReadAllText(path);
+            var jsonString = File.ReadAllText(path[0]);
             var appearanceIntensity = JsonUtility.FromJson<AppearanceIntensityJSON>(jsonString);
 
             if (appearanceIntensity.PeopleAppearanceIntensityArray == null
@@ -91,8 +92,8 @@ public class GameSettings : MonoBehaviour
                 appearanceIntensity.CarsAppearanceIntensityArray ?? DefaultAppearanceIntensityParameters.DefaultCarsAppearanceIntensity;
             AppearanceIntensity.PeopleAppearanceIntensityArray = 
                 appearanceIntensity.PeopleAppearanceIntensityArray ?? DefaultAppearanceIntensityParameters.DefaultPeopleAppearanceIntensity;
-            
 
+            AppearanceIntensityGameobject.SetAppearanceParameters();
         }
     }
 }

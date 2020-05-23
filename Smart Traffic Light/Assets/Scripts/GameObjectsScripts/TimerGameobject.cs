@@ -67,7 +67,5 @@ public class TimerGameobject : MonoBehaviour
 
         TimeOfDay.Second++;
         isSecondPassed = true;
-    }
-
-    
+    }    
 }
