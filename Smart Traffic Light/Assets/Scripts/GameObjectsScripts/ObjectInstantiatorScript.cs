@@ -90,7 +90,7 @@ public class ObjectInstantiatorScript : MonoBehaviour
 
         isCarsCanSpawn = false;
 
-        yield return new WaitForSecondsRealtime(realtimeDelay);
+        yield return new WaitForSeconds(realtimeDelay);
 
         isCarsCanSpawn = true;
     }

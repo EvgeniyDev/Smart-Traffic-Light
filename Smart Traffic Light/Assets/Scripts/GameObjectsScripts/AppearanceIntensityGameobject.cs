@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class AppearanceIntensityGameobject : MonoBehaviour
 {
-    [HideInInspector]
     public double[] carsAppearanceIntensity;
-    [HideInInspector]
     public double[] peopleAppearanceIntensity;
 
     void Start()
