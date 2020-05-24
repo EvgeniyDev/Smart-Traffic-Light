@@ -95,6 +95,8 @@ public class ObjectInstantiatorScript : MonoBehaviour
 
                 randomPerson.transform.position =
                     new Vector3(randomSpawnPoint.gameObject.transform.position.x, randomSpawnPoint.transform.position.y);
+                randomPerson.transform.eulerAngles = new Vector3(0, 0, -90);
+                randomPerson.GetComponent<PedestrianScript>().moveTo = Vector3.up;
 
                 break;
 
@@ -106,6 +108,8 @@ public class ObjectInstantiatorScript : MonoBehaviour
 
                 randomPerson.transform.position =
                     new Vector3(randomSpawnPoint.gameObject.transform.position.x, randomSpawnPoint.transform.position.y);
+                randomPerson.transform.eulerAngles = new Vector3(0, 0, -90);
+                randomPerson.GetComponent<PedestrianScript>().moveTo = Vector3.up;
 
                 break;
 
@@ -117,6 +121,8 @@ public class ObjectInstantiatorScript : MonoBehaviour
 
                 randomPerson.transform.position =
                     new Vector3(randomSpawnPoint.gameObject.transform.position.x, randomSpawnPoint.transform.position.y);
+                randomPerson.transform.eulerAngles = new Vector3(0, 0, 90);
+                randomPerson.GetComponent<PedestrianScript>().moveTo = Vector3.up;
 
                 break;
 
@@ -128,6 +134,8 @@ public class ObjectInstantiatorScript : MonoBehaviour
 
                 randomPerson.transform.position =
                     new Vector3(randomSpawnPoint.gameObject.transform.position.x, randomSpawnPoint.transform.position.y);
+                randomPerson.transform.eulerAngles = new Vector3(0, 0, 90);
+                randomPerson.GetComponent<PedestrianScript>().moveTo = Vector3.up;
 
                 break;
         }
