@@ -70,13 +70,11 @@ namespace Assets.Scripts.Models
             switch (levelNumber)
             {
                 case 1:
+                case 2:
                     delay = (int)Math.Round(
                         AppearanceIntensity.CurrentPeopleAppearance * waitingPeopleParameters.WaitingPeopleAmount, 
                         MidpointRounding.AwayFromZero);
                     break;
-
-                case 2:
-                    throw new NotImplementedException();
 
                 default:
                     throw new Exception("Level was not found!");
@@ -97,13 +95,11 @@ namespace Assets.Scripts.Models
             switch (levelNumber)
             {
                 case 1:
+                case 2:
                     delay = (int)Math.Round(
                         AppearanceIntensity.CurrentCarsAppearance * waitingCarsParameters.WaitingCarsAmount * carsCoefficient,
                         MidpointRounding.AwayFromZero);
                     break;
-
-                case 2:
-                    throw new NotImplementedException();
 
                 default:
                     throw new Exception("Level was not found!");
