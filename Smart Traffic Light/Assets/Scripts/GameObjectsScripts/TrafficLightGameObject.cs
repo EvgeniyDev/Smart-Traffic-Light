@@ -16,7 +16,8 @@ public class TrafficLightGameObject : MonoBehaviour
     private WaitingCarsParameters thisWaitingCarsParameters;
 
     public Collider2D[] waitingCarsStoplineColliders;
-
+    public Collider2D[] waitingPedestriansStoplineColliders;
+    
     [HideInInspector]
     public TrafficLight trafficLightLogic;
 
@@ -68,6 +69,7 @@ public class TrafficLightGameObject : MonoBehaviour
     private IEnumerator RedSignal()
     {
         isSignalCoroutineEnd = false;
+        SetPedestrianColliderStatus(false);
 
         VisualizeTrafficLightSignal(trafficLightLogic.TrafficLightSignal);
         delay = trafficLightLogic.CalculateDelay(levelData.levelNumber);
@@ -78,6 +80,7 @@ public class TrafficLightGameObject : MonoBehaviour
 
         previousSignal = TrafficLightSignal.RedLight;
         trafficLightLogic.TrafficLightSignal = TrafficLightSignal.YellowLight;
+        SetPedestrianColliderStatus(true);
         isSignalCoroutineEnd = true;
     }
 
@@ -156,6 +159,18 @@ public class TrafficLightGameObject : MonoBehaviour
     private void SetCarColliderStatus(bool isEnabled)
     {
         foreach (var collider in waitingCarsStoplineColliders)
+        {
+            collider.enabled = isEnabled;
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="isEnabled"></param>
+    private void SetPedestrianColliderStatus(bool isEnabled)
+    {
+        foreach (var collider in waitingPedestriansStoplineColliders)
         {
             collider.enabled = isEnabled;
         }
