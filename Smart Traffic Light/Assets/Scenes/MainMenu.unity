@@ -5643,6 +5643,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMixer: {fileID: 24100000, guid: adb815dbabb382a40a2c5bc6632405e8, type: 2}
+  volume: {fileID: 1096754114}
+  qualitySettings: {fileID: 2087977451}
+  fullscreen: {fileID: 1212407595}
   resolutionDropdown: {fileID: 1971848503}
 --- !u!1 &1737304763
 GameObject:
